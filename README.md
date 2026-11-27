@@ -1,196 +1,86 @@
 # ⚽ Football Player Performance Analytics Dashboard
 
-<p align="center">
-  **Turning Football Statistics into Meaningful Performance Insights**
-</p>
+**An interactive dashboard for exploring, comparing, and visualizing football player statistics.**
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.12-blue?logo=python" />
-  <img src="https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?logo=streamlit" />
-  <img src="https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas" />
-  <img src="https://img.shields.io/badge/Plotly-Visualization-3F4F75?logo=plotly" />
-  <img src="https://img.shields.io/badge/Status-In%20Development-orange" />
-</p>
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit)
+![Pandas](https://img.shields.io/badge/Pandas-Analysis-150458?logo=pandas)
+![Plotly](https://img.shields.io/badge/Plotly-Visualization-3F4F75?logo=plotly)
 
-## 📌 Overview
+## Overview
+This project is a Streamlit-based football statistics dashboard. It provides filters, summary metrics, visual analysis, player comparisons, rankings, and CSV export.
 
-The **Football Player Performance Analytics Dashboard** is a data analytics project focused on exploring, analyzing, and visualizing football player performance through statistical data and interactive visualizations.
+> **Dataset notice:** `football_players.csv` contains fictional demonstration records generated for this starter project. It is not real-world football data and must not be used to make claims about actual players or clubs. Replace it with a properly sourced dataset and document its license before using real data.
 
-The project aims to transform raw football statistics into meaningful insights that help users understand individual player performance, compare players across different metrics, identify top performers, and explore performance patterns.
+## Features
+- Filter players by club, position, and age.
+- View player count, goals, assists, and average rating.
+- Explore goals by club and player distribution by position.
+- Inspect goals against expected goals per 90.
+- Compare two selected players across key metrics.
+- Rank players by goals, assists, rating, xG/90, xA/90, or clean sheets.
+- View and download the filtered data as CSV.
 
-Using Python and modern data visualization technologies, the dashboard is being developed to provide an interactive and user-friendly platform for football data analysis.
+## Technology
+- Python
+- Pandas
+- Streamlit
+- Plotly
 
-## 🎯 Project Objectives
-
-- Analyze football player performance using statistical data.
-- Evaluate players based on important performance indicators.
-- Compare individual players across different metrics.
-- Identify top-performing players through statistical analysis.
-- Explore performance differences across playing positions.
-- Present complex football statistics through interactive visualizations.
-- Make football data easier to understand through a structured dashboard.
-
-## ✨ Key Features
-
-The project is planned to include the following functionalities:
-
-| Feature | Description |
-|---|---|
-| Player Overview | Display important player information and performance statistics. |
-| Performance Analysis | Analyze goals, assists, appearances and other metrics. |
-| Player Comparison | Compare two players using statistical indicators. |
-| Top Performers | Identify high-performing players based on selected metrics. |
-| Position Analysis | Explore performance across different playing positions. |
-| Interactive Charts | Visualize statistics through interactive graphs. |
-| Dynamic Filters | Filter players based on available dataset attributes. |
-
-## 🛠️ Technology Stack
-
-| Technology | Application |
-|---|---|
-| Python | Core programming and data processing |
-| Pandas | Data cleaning, manipulation and analysis |
-| NumPy | Numerical operations and calculations |
-| Streamlit | Interactive dashboard development |
-| Plotly | Interactive charts and visualizations |
-| Git & GitHub | Version control and project management |
-
-## 📊 Performance Metrics
-
-The dashboard aims to explore different football performance indicators, including:
-
-**Attacking Performance**
-- Goals scored
-- Assists
-- Expected Goals (xG)
-- Expected Assists (xAG)
-- Goals per 90 minutes
-
-**Playing Performance**
-- Matches played
-- Starts
-- Minutes played
-- Appearances
-
-**Additional Analysis**
-- Position-based performance
-- Player comparison
-- Performance rankings
-- Statistical trends
-
-*The availability of individual metrics will depend on the selected dataset.*
-
-## 📈 Dashboard Preview
-
-Interactive dashboard screenshots and visualizations will be added here after implementation.
-
-## 📂 Dataset
-
-The project will use structured football player statistics containing player information and performance-related attributes.
-
-The dataset will be evaluated for:
-- Data completeness
-- Missing values
-- Consistency of statistical attributes
-- Suitability for player comparison and performance analysis
-
-Dataset source, licensing information and preprocessing details will be documented here.
-
-## ⚙️ Installation & Setup
-
-### Prerequisites
-
-Make sure the following software is installed:
-
-- Python 3.12 or compatible version
-- Git
-- Visual Studio Code (recommended)
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/kunalpatil-ce/football-player-performance-analytics.git
+## Project Structure
+```text
+football-player-performance-analytics/
+├── .streamlit/
+│   └── config.toml
+├── app.py
+├── football_players.csv
+├── requirements.txt
+├── .gitignore
+├── LICENSE
+└── README.md
 ```
 
-### 2. Navigate to the Project Directory
+## Run Locally
+1. Install Python 3.10 or newer.
+2. Clone this repository:
+   ```bash
+   git clone https://github.com/kunalpatil-ce/football-player-performance-analytics.git
+   cd football-player-performance-analytics
+   ```
+3. Create and activate a virtual environment (Windows):
+   ```bash
+   python -m venv .venv
+   .venv\Scripts\activate
+   ```
+4. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+5. Start the dashboard:
+   ```bash
+   streamlit run app.py
+   ```
 
-```bash
-cd football-player-performance-analytics
-```
+## Dataset Schema
+The sample CSV includes player, nationality, club, position, age, matches, starts, goals, assists, clean sheets, xG per 90, xA per 90, and rating.
 
-### 3. Create a Virtual Environment
+## Limitations
+- The included dataset is fictional sample data.
+- Metrics and rankings are illustrative, not official player evaluations.
+- Real-world analysis requires a reliable dataset, clear metric definitions, and source attribution.
 
-```bash
-python -m venv .venv
-```
+## Future Improvements
+- Integrate a licensed, real-world football dataset.
+- Add league and season filters when those fields are available.
+- Expand position-specific metrics.
+- Add tests and data-validation checks.
+- Deploy the dashboard online.
 
-Activate the environment:
-
-**Windows:**
-
-```bash
-.venv\Scripts\activate
-```
-
-### 4. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 5. Run the Dashboard
-
-Once the application files are implemented:
-
-```bash
-streamlit run dashboard/app.py
-```
-
-## 🔍 Project Workflow
-
-The planned data analytics workflow consists of:
-
-1. **Data Collection** – Obtain structured football player statistics.
-2. **Data Preprocessing** – Inspect, clean and prepare the dataset.
-3. **Exploratory Data Analysis** – Understand player statistics and identify patterns.
-4. **Performance Analysis** – Calculate and examine relevant performance indicators.
-5. **Data Visualization** – Present analytical findings using interactive charts.
-6. **Dashboard Development** – Integrate analysis into an interactive Streamlit application.
-
-## 🚀 Future Enhancements
-
-- Add additional football leagues and seasons.
-- Introduce advanced player performance indicators.
-- Develop player scouting and ranking functionality.
-- Include more detailed player comparison tools.
-- Explore machine learning-based performance predictions.
-- Deploy the dashboard for public access.
-
-## 📌 Project Status
-
-**Currently in Development**
-
-The project is being developed incrementally, beginning with dataset preparation and data analysis, followed by interactive dashboard development, testing and deployment.
-
-## 👨‍💻 Author
-
-**Kunal Patil**
-
-Computer Engineering Student
+## Author
+**Kunal Patil** — Computer Engineering Student
 
 - GitHub: [@kunalpatil-ce](https://github.com/kunalpatil-ce)
 - LinkedIn: [Kunal Patil](https://linkedin.com/in/kunal-patil-711783332)
 
-## 📄 License
-
-This project is intended to be distributed under the MIT License. See the `LICENSE` file for details.
-
----
-
-<p align="center">
-  **⚽ Football Analytics | Data Science | Performance Insights**
-</p>
-
-<p align="center">
-  If you find this project interesting, consider giving it a ⭐ on GitHub!
-</p>
+## License
+Distributed under the MIT License. See [LICENSE](LICENSE).
